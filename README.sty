@@ -1,63 +1,47 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
+Repository Description
 
-\title{Analysis of Out-of-Pocket Health Payments in Mexico}
-\author{}
-\date{}
+This repository holds the code and CSV files needed to recreate the project. The file Final for.ipynb
+contains the Python script to run the analysis, returning regression results in the terminal similar to those
+published in the paper. The paper was released in multiple parts, and the variables used in constructing
+the graphs are based on these regression results.
 
-\begin{document}
+Paper Overview
+The paper, titled “Analysis of the distributional impact of out-of-pocket health payments: Evidence
+from a public health insurance program for the poor in Mexico,” by Rocio Garcia-Diaz and Sandra G.
+Sosa-Rubi, focuses on several aspects.
 
-\maketitle
+Objective
+• Primary Focus: Investigating the impact of out-of-pocket (OOP) health payments on poverty
+within the context of Mexico’s public health insurance program, Seguro Popular.
+Methodology & Instrument
+• Approach: Employing distributional poverty impact methods and marginal dominance approaches
+to analyze OOP health payments and their impact on poverty.
+• Data Sources: Utilizes data from Mexico’s Income and Expenditure National Survey 2006.
 
-\section*{Repository Description}
-This repository holds the code and CSV files needed to recreate the project. The file \texttt{Final\_for.ipynb} contains the Python script to run the analysis, returning regression results in the terminal similar to those published in the paper. The paper was released in multiple parts, and the variables used in constructing the graphs are based on these regression results.
+Key Findings
+• Results: Evidence suggests that Seguro Popular has a better distributional poverty impact com-
+pared to other poverty-reducing policies. It demonstrates that the program reduces the financial
+burden of health expenses among the poorest families more effectively than other policies.
 
-\section*{Paper Overview}
-The paper, titled ``Analysis of the distributional impact of out-of-pocket health payments: Evidence from a public health insurance program for the poor in Mexico,'' by Rocio Garcia-Diaz and Sandra G. Sosa-Rubi, focuses on several aspects.
+Implications
+• Policy Relevance: Highlights the importance of targeted health financing policies in reducing
+the poverty-inducing effects of healthcare costs, especially in developing countries like Mexico.
 
-\subsection*{Objective}
-\begin{itemize}
-    \item \textbf{Primary Focus:} Investigating the impact of out-of-pocket (OOP) health payments on poverty within the context of Mexico's public health insurance program, Seguro Popular.
-\end{itemize}
+Project Prompt
+This is the prompt that was used, which should be able to be fed into ChatGPT to return the script in
+Final form.py:
+“I’m working on a data analysis project in Python involving economic data from Mexico. The project
+includes data preprocessing, statistical modeling, causal inference, and visualization. I have three CSV
+files: ’Concen.csv’, ’hogares1.csv’, and ’Poblacion.csv’, which need to be merged based on a common
+column ’folio’. After merging, I need to clean the data, handle missing values, and create a subset of
+variables. Here are the specific requirements...”
 
-\subsection*{Methodology \& Instrument}
-\begin{itemize}
-    \item \textbf{Approach:} Employing distributional poverty impact methods and marginal dominance approaches to analyze OOP health payments and their impact on poverty.
-    \item \textbf{Data Sources:} Utilizes data from Mexico's Income and Expenditure National Survey 2006.
-\end{itemize}
-
-\subsection*{Key Findings}
-\begin{itemize}
-    \item \textbf{Results:} Evidence suggests that Seguro Popular has a better distributional poverty impact compared to other poverty-reducing policies. It demonstrates that the program reduces the financial burden of health expenses among the poorest families more effectively than other policies.
-\end{itemize}
-
-\subsection*{Implications}
-\begin{itemize}
-    \item \textbf{Policy Relevance:} Highlights the importance of targeted health financing policies in reducing the poverty-inducing effects of healthcare costs, especially in developing countries like Mexico.
-\end{itemize}
-
-\section*{Project Prompt}
-This is the prompt that was used, which should be able to be fed into ChatGPT to return the script in \texttt{Final\_form.py}:
-
-\textit{``I'm working on a data analysis project in Python involving economic data from Mexico. The project includes data preprocessing, statistical modeling, causal inference, and visualization. I have three CSV files: 'Concen.csv', 'hogares1.csv', and 'Poblacion.csv', which need to be merged based on a common column 'folio'. After merging, I need to clean the data, handle missing values, and create a subset of variables. Here are the specific requirements...''}
-
-\section*{Requirements}
-\begin{enumerate}
-    \item \textbf{Data Loading and Merging:} Load the CSV files using Pandas, merge on 'folio', and clean.
-    \item \textbf{Data Transformation:} Perform binning and select variables.
-    \item \textbf{Propensity Score Estimation:} Logistic regression for 'beca' and nearest neighbor matching.
-    \item \textbf{Causal Inference:} Use CausalModel, assess balance before and after matching.
-    \item \textbf{Data Standardization:} Standardize covariates for regression analysis.
-    \item \textbf{Advanced Statistical Analysis:} Run logistic and linear regression models.
-    \item \textbf{Data Visualization:} Generate histograms and scatter plots using seaborn and matplotlib.
-    \item \textbf{Saving Outputs:} Save data frames and plots.
-\end{enumerate}
-
-\end{document}
+Requirements
+1. Data Loading and Merging: Load the CSV files using Pandas, merge on ’folio’, and clean.
+2. Data Transformation: Perform binning and select variables.
+3. Propensity Score Estimation: Logistic regression for ’beca’ and nearest neighbor matching.
+4. Causal Inference: Use CausalModel, assess balance before and after matching.
+5. Data Standardization: Standardize covariates for regression analysis.
+6. Advanced Statistical Analysis: Run logistic and linear regression models.
+7. Data Visualization: Generate histograms and scatter plots using seaborn and matplotlib.
+8. Saving Outputs: Save data frames and plots.
